@@ -34,11 +34,10 @@ public class Start {
 		
 		System.out.println("\nInsert data about company");
 		Company c = createCompany();
-		c.setClients(clients);
 		c.setEmployees(employees);
+		c.setClients(clients);
 		
 		System.out.println(c);
-		
 	}
 
 	private static Client createClient(){
