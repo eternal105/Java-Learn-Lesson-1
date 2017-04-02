@@ -1,5 +1,8 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Company {
 
 	private String id;
@@ -8,13 +11,14 @@ public class Company {
 	private Employee[] employees;
 	private Comunication[] comunications;
 	private Service[] services;
-	private Alarm[] alarms;
+	private List<Alarm> alarms;
 	
 	public Company(String id, String name) {
 		this.id = id;
 		this.name = name;
 		this.clients = new Client[0];
 		this.employees = new Employee[0];
+		this.alarms = new ArrayList<>();
 	}
 
 	public String getId() {
@@ -65,11 +69,11 @@ public class Company {
 		this.services = services;
 	}
 
-	public Alarm[] getAlarms() {
+	public List<Alarm> getAlarms() {
 		return alarms;
 	}
 
-	public void setAlarms(Alarm[] alarms) {
+	public void setAlarms(List<Alarm> alarms) {
 		this.alarms = alarms;
 	}
 

@@ -9,11 +9,11 @@ public class Alarm {
 	private LocalDateTime time;
 	private Boolean isActive;
 	
-	public Alarm(Client client, String description, LocalDateTime time, Boolean isActive) {
+	public Alarm(Client client, String description, LocalDateTime time) {
 		this.client = client;
 		this.description = description;
 		this.time = time;
-		this.isActive = isActive;
+		this.isActive = true;
 	}
 
 	public Client getClient() {

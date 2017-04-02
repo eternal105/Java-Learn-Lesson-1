@@ -6,7 +6,7 @@ public abstract class Person {
 	private String LastName;
 	
 	public Person(String firstName, String lastName) {
-		this.setFirstName(firstName);
+		this.firstName = firstName;
 		setLastName(lastName);
 	}
 
@@ -23,6 +23,6 @@ public abstract class Person {
 	}
 
 	public void setLastName(String lastName) {
-		LastName = lastName;
+		this.LastName = lastName;
 	}
 }

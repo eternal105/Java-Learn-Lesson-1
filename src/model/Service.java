@@ -1,24 +1,24 @@
 package model;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class Service {
 
 	private Client client;
 	private String type;
 	private String description;
-	private LocalDate date;
+	private LocalDateTime date;
 	private BigDecimal price;
 	private Boolean isFinished;
 	private Boolean isPaid;
 	
-	public Service(Client client, String type, String description, LocalDate date, BigDecimal price) 
+	public Service(Client client, String type, String description, BigDecimal price) 
 	{
 		this.client = client;
 		this.type = type;
 		this.description = description;
-		this.date = date;
+		this.date = LocalDateTime.now();
 		this.price = price;
 		this.isFinished = false;
 		this.isPaid = false;
@@ -48,11 +48,11 @@ public class Service {
 		this.description = description;
 	}
 
-	public LocalDate getDate() {
+	public LocalDateTime getDate() {
 		return date;
 	}
 
-	public void setDate(LocalDate date) {
+	public void setDate(LocalDateTime date) {
 		this.date = date;
 	}
 
